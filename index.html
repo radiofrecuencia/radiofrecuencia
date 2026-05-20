@@ -1,96 +1,162 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface Pro - Fixed</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* CSS INTEGRADO PARA QUE NO TE FALLES */
-        :root {
-            --bg-dark: #050505;
-            --accent: #00ff88;
-            --accent-alt: #60efff;
-            --text-main: #ffffff;
-            --text-dim: #a1a1a1;
-        }
+    <title>RADIOFRECENCIA</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
 
-        .mesh-gradient {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1;
-            background: 
-                radial-gradient(at 0% 0%, rgba(0, 255, 136, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(96, 239, 255, 0.15) 0px, transparent 50%);
-        }
+     <!-- Bootstrap CSS (desde CDN) LINK DE BOOSTRAP -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 30px 10%;
-            align-items: center;
-        }
+     <!-- Tu JS propio -->
+    <script src="script.js"></script>
 
-        .logo { font-weight: 900; font-size: 1.5rem; }
-        .logo span { color: var(--accent); }
 
-        .hero {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            padding: 0 10%;
-        }
+     <!-- MI LINK PARA CONECTAR CON CSS -->
+     <link rel="stylesheet" href="style.css">
 
-        .hero-content { max-width: 700px; }
 
-        h1 {
-            font-size: clamp(2.5rem, 7vw, 4.5rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
 
-        .text-gradient {
-            background: linear-gradient(90deg, var(--accent), var(--accent-alt));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .primary-btn {
-            background: var(--accent);
-            color: #000;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
-        }
-    </style>
+    <!--TRABAJAMOS CON BOOSTRAP-->
 </head>
+
+<!-- EMPEZAMOS CON EL CUERPO DE LA PANA-->
 <body>
-    <div class="mesh-gradient"></div>
-    <nav>
-        <div class="logo">CORE<span>X</span></div>
-    </nav>
-    <main class="hero">
-        <div class="hero-content">
-            <h1>Crea el futuro <br> <span class="text-gradient">sin límites.</span></h1>
-            <p style="color: var(--text-dim); margin-bottom: 30px;">Si lees esto con colores, es porque ya funcionó. Dale con todo.</p>
-            <button class="primary-btn">Empezar ahora</button>
-        </div>
-    </main>
+    <!-- ESTE ES EL LINK DEL CARRUCEL PARA CONECTAR EL JS CON BOOSTRAP-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="mx-auto p-4" style="width: 350px;">
+  <h1>RADIOFRECENCIA</h1>
+</div>
+    <!-- EL SUBTITULO - IZQUIERDA-->
+  <div class="mx-auto p-8s" style="width: 1400px;">
+  <h1>solo en Ilave - puno</h1>
+</div>
+    
+    
+    
+<!--BARRA DE NAVECION (COMPONENETES - BOOSTTRAP)-->
+   <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+<!--Alineado a la derecha con .justify-content-end:-->
+
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Activo</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">hola</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">noche</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">martes</a>
+  </li>
+</ul>
+
+
+<!--barra del carrucel-->
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="img/ft1.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="img/ft2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/ft3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+<!-- FILA 1 -->
+ <!-- PRIMER CUADRO 1-->
+<div class="row">
+    <div class="card" style="width: 18rem;">
+  <img src="img/ft1.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<!-- SENDO CUADRO 2-->
+    <div class="col-4"> tarjeta 2 </div>
+
+    <!-- TERCER CUADRO 3-->
+    <div class="col-4"> tarjeta 3 </div>
+</div>
+
+<!-- FILA 2 -->
+<div class="row">
+    <!-- CUARTO CUADRO 4-->
+    <div class="col-4"> tarjeta 4 </div>
+    <!-- QUINTO CUADRO 5-->
+    <div class="col-4"> tarjeta 5 </div>
+    <!-- SEXTO CUADRO 6-->
+    <div class="col-4"> tarjeta 6 </div>
+</div>
+
+
+
+
+
 </body>
 </html>
+
+
